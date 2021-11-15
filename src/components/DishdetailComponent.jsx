@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 export default class DishDetail extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   renderDish(dish) {
     return(
@@ -34,7 +31,6 @@ export default class DishDetail extends Component {
                     <p>–– {comment.author}, {dateArray[1]} {dateArray[2]}, {dateArray[3]}</p>
                   </li>
                 )
-                console.log(comment);
               })
             }
           </ul>
