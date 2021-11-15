@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
 export default class DishDetail extends Component {
 
-  renderDish(dish) {
+  renderDish() {
     return(
       <Card>
         <CardImg top src={this.props.dish.image} alt={this.props.dish.name} />
