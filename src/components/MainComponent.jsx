@@ -7,6 +7,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
+import About from './AboutComponent';
 
 import { DISHES } from '../shared/dishes';
 import { COMMENTS } from '../shared/comments';
@@ -56,9 +57,10 @@ class Main extends Component {
         <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} /> */}
           <Switch>
               <Route path='/home' component={HomePage} />
+              <Route exact path='/aboutus' component={() => <About leaders={this.state.leaders} />} />
               <Route exact path='/menu' component={() => <Menu dishes={this.state.dishes} />} />
-              <Route exact path='/contactus' component={Contact} />
               <Route path='/menu/:dishId' component={DishWithId} />
+              <Route exact path='/contactus' component={Contact} />
               <Redirect to="/home" />
           </Switch>
         <Footer />
